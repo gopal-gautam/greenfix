@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"></meta>
+        <title>EOS Global</title>
+        <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+        <link href="img/favicon.png" rel="icon" type="image/x-icon"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"></meta>
+        <meta content="EOS Hackathon greenfix" name="description"></meta>
+        <meta content="Bishal Bhansali" name="author"></meta>
+        <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/sb-admin.css" rel="stylesheet"/>
+        <!-- Page level plugin CSS-->
+        <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet"/>
+        <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css rel="stylesheet"/>
+        <link href="css/styles.css" rel="stylesheet"></link>
+        <script src="https://cdn.jsdelivr.net/npm/eosjs@16.0.0/lib/eos.min.js"
+            integrity="sha512-vNyLnOEb7uFmEtVbLnyZQ9/k4zckM2Vu3jJOKq6XfWEVZG0yKcjDExVN4EQ7e3F+rePWRncMolI2xFi/3qo62A=="
+            crossorigin="anonymous"></script>
+
+          <script>
+          eos = Eos({
+            httpEndpoint: 'http://127.0.0.1:8888',
+            chainId: 'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f',
+            verbose: true
+          })
+        </script>
+
+    </head>
+
+
+    <body  >
+        <header class="header maincontent">
+        </header>
+        <br/><br/><br/>
+        <div class="container-fluid" id="content">
+        </div>
+        <footer id="footer" style="background: #21252966;">
+            <span>
+                Observe, report or fix an environmental 
+            </span>
+        </footer>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/backbone/popper.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/backbone/underscore-min.js"></script>
+        <script src="vendor/backbone/backbone-min.js"></script>
+        <script src="vendor/datatables/jquery.dataTables.js"></script>
+        <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+        <script src="js/sb-admin.min.js"></script>
+        <script src="js/sb-admin-datatables.min.js"></script>
+        
+        <script src="main/utils.js"></script>
+        <script src="main/models/models.js"></script>
+        <script src="main/views/header.js"></script>
+        <script src="main/views/register.js"></script>
+        <script src="main/views/addedithazardinfo.js"></script>
+        <script src="main/views/involvedparties.js"></script>
+        <script src="main/main.js"></script>
+        <script src="main/account.js"></script>
+    </body>
+</html>

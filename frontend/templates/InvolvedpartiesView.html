@@ -1,0 +1,222 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-4 col-sm-6 mb-3">
+            <div class="card text-white o-hidden h-100" style="background-color: #351d227a!important;">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <i class="fa fa-fw fa-list">
+                        </i>
+                    </div>
+                    <div class="mr-5">
+                        <%= data.totalinvolvedparties %>
+                    </div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" data-placement="bottom" data-toggle="tooltip" href="javascript:;" title="">
+                    <span class="float-left">
+                        Total sustainable product nominated
+                    </span>
+                    <span class="float-right">
+                        <i class="fa fa-angle-right">
+                        </i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="col-xl-4 col-sm-6 mb-3">
+            <div class="card text-white o-hidden h-100" style="background-color: #35384699!important;">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <i class="fa fa-fw fa-comments">
+                        </i>
+                    </div>
+                    <div class="mr-5">
+                        <%= data.totaltriggers %>
+                    </div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" data-placement="bottom" data-toggle="tooltip" href="javascript:;" title="">
+                    <span class="float-left">
+                        Total Incident reported
+                    </span>
+                    <span class="float-right">
+                        <i class="fa fa-angle-right">
+                        </i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="col-xl-4 col-sm-6 mb-3">
+            <div class="card text-white o-hidden h-100" style="background-color: #56503391!important;">
+                <div class="card-body">
+                    <div class="card-body-icon">
+                        <i class="fa fa-fw fa-shopping-cart">
+                        </i>
+                    </div>
+                    <div class="mr-5">
+                        <%= data.totalcheckedin %> Token Earned
+                    </div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1" data-placement="bottom" data-toggle="tooltip" href="javascript:;" title="">
+                    <span class="float-left">
+                        <%= data.totaltriggers %> Bonus Tokens Earned
+                    </span>
+                    <span class="float-right">
+                        <i class="fa fa-angle-right">
+                        </i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-12 col-sm-2 mb-3">
+        <div class="card text-white o-hidden h-100">
+            <span class="card-footer text-white clearfix small z-1 float-right">
+                <button class="btn btn-outline-info float-right" id="btnAddClub" type="submit">
+                    <i class="fa fa-camera">
+                    </i>
+                    Nominate Sustainable Product
+                </button>
+                <a class="font-weight-bold float-left tooltipinf" href="javascript:;" id="btnInvolvedParySideBar" style="color: black;font-size: 18px;margin-bottom: 0px;margin-top: 7px;">
+                    <i class="fa fa-reorder">
+                    </i>
+                    <%= data.involvedParty.Name %>
+                </a>
+                <a class="btn btn-link" data-content="Click on <i class='fa fa-reorder'></i> icon to view or edit details." data-html="true" data-toggle="popover" data-trigger="focus" role="button" tabindex="0" title="View/Edit details">
+                    <i class="fa fa-info-circle" style="color: #16a2b8;margin-top: 5px;">
+                    </i>
+                </a>
+            </span>
+            <div class="card mb-3 addEdithazardinfoView collapse border border-info" id="addEdithazardinfoView" style="display: none;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- </form> -->
+<!-- Example DataTables Card-->
+<div class="card mb-3 collapse">
+    <div class="card-header">
+        <i class="fa fa-share-alt" style="margin-top: 10px;">
+        </i>
+        Incident List
+        <span class="clearfix small z-1 float-right">
+            <a class="btn btn-outline-info float-right" href="javascript:;" id="btnAddTriggers" value="location">
+                <i class="fa fa-map-marker">
+                </i>
+                Add New Incident
+            </a>
+        </span>
+    </div>
+    <div class="card-body">
+        <div class="card mb-3 addEditTriggersView collapse border border-info" style="display: none;">
+            <div class="row justify-content-end">
+                <a class="font-weight-bold float-left tooltipinf" href="javascript:;" id="btnCloseTriggerView" style="color: black;font-size: 30px;margin-bottom: 0px;margin-top: 7px;margin-right: 30px;">
+                    <i class="fa fa-close">
+                    </i>
+                </a>
+            </div>
+            <div class="row justify-content-md-center">
+                <!-- Add to cart -->
+                <div class="col-12 col-lg-6 add_to_cart_block">
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <div class="form-group" mb-3"="">
+                                <div class="controls col-12 col-lg-8">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            Location
+                                        </span>
+                                        <input class="form-control" id="Name" name="Name" placeholder="Address" type="text" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group" mb-3"="">
+                                <div class="controls col-12 col-lg-11">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon3">
+                                            Description
+                                        </span>
+                                        <input aria-describedby="basic-addon3" class="form-control" id="membershipapiendpoint" name="membershipapiendpoint" placeholder="" type="text" value="<%= data.involvedParty.membershipapiendpoint %>"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="modal-footer">
+                    <button class="btn btn-outline-secondary" data-dismiss="modal" id="btnCloseTriggerView" type="button">
+                        Cancel
+                    </button>
+                    <button class="btn btn-outline-primary" data-dismiss="modal" id="btnAddUpdateTriggers" type="button">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive ">
+            <div class="dataTables_wrapper container-fluid dt-bootstrap4" id="dataTable_wrapper">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table aria-describedby="dataTable_info" cellspacing="0" class="table table-bordered table-striped dataTable table table-bordered table-hover display" id="triggersDataTable" role="grid" style="width: 100%;" width="100%">
+                            <thead>
+                                <tr role="row">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Incident Location
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th>
+                                        Tokens earned
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        Edit
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="QRCodeView" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="triggertitle">
+                </h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">
+                        ×
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body" style="background-color: #8080802e;">
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        <div class="text-center">
+                            <div id="detailDisplay">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal" type="button">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
